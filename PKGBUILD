@@ -2,7 +2,7 @@
 
 pkgname=ap6256-firmware
 pkgver=2019.06
-pkgrel=1
+pkgrel=2
 arch=('aarch64')
 pkgdesc='Firmware files for the ap6256 wifi/bt module'
 license=('unknown')
@@ -24,4 +24,7 @@ package() {
     install -Dm755 "fw_bcm43456c5_ag_apsta.bin" -t "${pkgdir}/usr/lib/firmware/"
     install -Dm755 "fw_bcm43456c5_ag_p2p.bin" -t "${pkgdir}/usr/lib/firmware/"
     install -Dm755 "nvram_ap6256.txt" -t "${pkgdir}/usr/lib/firmware/"
+    # Wfi fix because of weird setup
+    install -Dm755 "fw_bcm43456c5_ag.bin" "${pkgdir}/usr/lib/firmware/brcm/brcmfmac43456-sdio.bin"
+    install -Dm755 "nvram_ap6256.txt" "${pkgdir}/usr/lib/firmware/brcm/brcmfmac43456-sdio.txt"
 }
