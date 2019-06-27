@@ -2,7 +2,7 @@
 
 pkgname=ap6256-firmware
 pkgver=2019.06
-pkgrel=2
+pkgrel=3
 arch=('aarch64')
 pkgdesc='Firmware files for the ap6256 wifi/bt module'
 license=('unknown')
@@ -20,6 +20,7 @@ md5sums=('dc8b4466348c591174e96a31e4a1b13b'
 
 package() {
     install -Dm755 "BCM4345C5.hcd" -t "${pkgdir}/usr/lib/firmware/"
+    install -Dm755 "BCM4345C5.hcd" "${pkgdir}/usr/lib/firmware/brcm/BCM.hcd"
     install -Dm755 "fw_bcm43456c5_ag.bin" -t "${pkgdir}/usr/lib/firmware/"
     install -Dm755 "fw_bcm43456c5_ag_apsta.bin" -t "${pkgdir}/usr/lib/firmware/"
     install -Dm755 "fw_bcm43456c5_ag_p2p.bin" -t "${pkgdir}/usr/lib/firmware/"
@@ -27,4 +28,5 @@ package() {
     # Wfi fix because of weird setup
     install -Dm755 "fw_bcm43456c5_ag.bin" "${pkgdir}/usr/lib/firmware/brcm/brcmfmac43456-sdio.bin"
     install -Dm755 "nvram_ap6256.txt" "${pkgdir}/usr/lib/firmware/brcm/brcmfmac43456-sdio.txt"
+    install -Dm755 "nvram_ap6256.txt" "${pkgdir}/usr/lib/firmware/brcm/brcmfmac43456-sdio.radxa,rockpi4.txt"
 }
