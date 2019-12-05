@@ -2,7 +2,7 @@
 
 pkgname=ap6256-firmware
 pkgver=2019.11
-pkgrel=3
+pkgrel=4
 arch=('aarch64')
 pkgdesc='Firmware files for the ap6256 wifi/bt module'
 license=('unknown')
@@ -11,10 +11,12 @@ conflicts=('ap6398s-firmware')
 source=('BCM4345C5.hcd'
         'fw_bcm43456c5_ag.bin'
         'brcmfmac43456-sdio.clm_blob'
+        'dptx.bin'
         'nvram_ap6256.txt')
 md5sums=('4017a2bda950875f1fb3132b9ba7bbba'
          '4df335e66e8dedb9701c79bbee092e25'
          'c5aeca0e33de4ae870986c517963fef7'
+         'cb5347ba640a3f091816d21f19b7cae4'
          '259228920fb6c7e9369fdd13e7be1b43')
 
 package() {
@@ -26,4 +28,5 @@ package() {
     install -Dm644 "brcmfmac43456-sdio.clm_blob" "${pkgdir}/usr/lib/firmware/brcm/brcmfmac43456-sdio.clm_blob"
     install -Dm644 "nvram_ap6256.txt" "${pkgdir}/usr/lib/firmware/brcm/brcmfmac43456-sdio.radxa,rockpi4.txt"
     install -Dm644 "nvram_ap6256.txt" "${pkgdir}/usr/lib/firmware/brcm/brcmfmac43456-sdio.pine64,pinebook-pro.txt"
+    install -Dm644 "dptx.bin" -t "${pkgdir}/usr/lib/firmware/rockchip/"
 }
