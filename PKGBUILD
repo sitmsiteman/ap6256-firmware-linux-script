@@ -2,7 +2,7 @@
 
 pkgname=ap6256-firmware
 pkgver=2020.02
-pkgrel=1
+pkgrel=2
 arch=('aarch64')
 pkgdesc='Firmware files for the ap6256 wifi/bt module'
 license=('unknown')
@@ -25,14 +25,10 @@ package() {
     install -Dm644 "BCM4345C5.hcd" "${pkgdir}/usr/lib/firmware/brcm/BCM.hcd"
     install -Dm644 "BCM4345C5.hcd" -t "${pkgdir}/usr/lib/firmware/brcm/"
     # Wifi firmware
-    #cd pinebook-firmware/brcm/
-    #install -Dm644 "brcmfmac43456-sdio.txt" -t "${pkgdir}/usr/lib/firmware/"
     install -Dm644 "nvram_ap6256.txt" -t "${pkgdir}/usr/lib/firmware/"
     install -Dm644 "fw_bcm43456c5_ag.bin" "${pkgdir}/usr/lib/firmware/brcm/brcmfmac43456-sdio.bin"
-    #install -Dm644 "brcmfmac43456-sdio.bin" "${pkgdir}/usr/lib/firmware/brcm/brcmfmac43456-sdio.bin"
     install -Dm644 "brcmfmac43456-sdio.clm_blob" "${pkgdir}/usr/lib/firmware/brcm/brcmfmac43456-sdio.clm_blob"
     install -Dm644 "nvram_ap6256.txt" "${pkgdir}/usr/lib/firmware/brcm/brcmfmac43456-sdio.radxa,rockpi4.txt"
     install -Dm644 "nvram_ap6256.txt" "${pkgdir}/usr/lib/firmware/brcm/brcmfmac43456-sdio.pine64,pinebook-pro.txt"
-    #install -Dm644 "brcmfmac43456-sdio.txt" "${pkgdir}/usr/lib/firmware/brcm/brcmfmac43456-sdio.radxa,rockpi4.txt"
-    #install -Dm644 "brcmfmac43456-sdio.txt" "${pkgdir}/usr/lib/firmware/brcm/brcmfmac43456-sdio.pine64,pinebook-pro.txt"
+    install -Dm644 "nvram_ap6256.txt" "${pkgdir}/usr/lib/firmware/brcm/brcmfmac43456-sdio.pine64,rockpro64-v2.1.txt"
 }
