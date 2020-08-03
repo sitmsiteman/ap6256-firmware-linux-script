@@ -2,7 +2,7 @@
 
 pkgname=ap6256-firmware
 pkgver=2020.02
-pkgrel=2
+pkgrel=3
 arch=('aarch64')
 pkgdesc='Firmware files for the ap6256 wifi/bt module'
 license=('unknown')
@@ -17,7 +17,7 @@ source=( #"git+https://gitlab.manjaro.org/tsys/pinebook-firmware.git"
 md5sums=('4017a2bda950875f1fb3132b9ba7bbba'
          'f77e38b143174bae5f91be2bd27a7d3f'
          'c5aeca0e33de4ae870986c517963fef7'
-         '259228920fb6c7e9369fdd13e7be1b43')
+         '46d9e03856961ede5db81ac5d901f2da')
 
 package() {
     # Bluetooth firmware
