@@ -2,7 +2,7 @@
 
 pkgname=ap6256-firmware
 pkgver=2020.02
-pkgrel=6
+pkgrel=7
 arch=('aarch64')
 pkgdesc='Firmware files for the ap6256 wifi/bt module'
 license=('unknown')
@@ -34,5 +34,6 @@ package() {
     install -Dm644 "nvram_ap6256.txt" "${pkgdir}/usr/lib/firmware/brcm/brcmfmac43456-sdio.pine64,pinebook-pro.txt"
     install -Dm644 "nvram_ap6256.txt" "${pkgdir}/usr/lib/firmware/brcm/brcmfmac43456-sdio.pine64,rockpro64-v2.1.txt"
     install -Dm644 "nvram_ap6256.txt" "${pkgdir}/usr/lib/firmware/brcm/brcmfmac43456-sdio.pine64,quartz64-a.txt"
+    install -Dm644 "nvram_ap6256.txt" "${pkgdir}/usr/lib/firmware/brcm/brcmfmac43456-sdio.pine64,quartz64-b.txt"
     install -Dm644 "nvram_ap6256.txt" "${pkgdir}/usr/lib/firmware/brcm/brcmfmac43456-sdio.rockchip,rk3399-orangepi.txt"
 }
