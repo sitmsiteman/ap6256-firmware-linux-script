@@ -31,6 +31,7 @@ package() {
     install -Dm644 "brcmfmac43456-sdio.clm_blob" "${pkgdir}/usr/lib/firmware/brcm/brcmfmac43456-sdio.clm_blob"
     install -Dm644 "nvram_ap6256.txt" "${pkgdir}/usr/lib/firmware/brcm/brcmfmac43456-sdio.radxa,rockpi4b.txt"
     install -Dm644 "nvram_ap6256.txt" "${pkgdir}/usr/lib/firmware/brcm/brcmfmac43456-sdio.radxa,rockpi4c.txt"
+    install -Dm644 "nvram_ap6256.txt" "${pkgdir}/usr/lib/firmware/brcm/brcmfmac43456-sdio.radxa,zero.txt"
     install -Dm644 "nvram_ap6256.txt" "${pkgdir}/usr/lib/firmware/brcm/brcmfmac43456-sdio.pine64,pinebook-pro.txt"
     install -Dm644 "nvram_ap6256.txt" "${pkgdir}/usr/lib/firmware/brcm/brcmfmac43456-sdio.pine64,rockpro64-v2.1.txt"
     install -Dm644 "nvram_ap6256.txt" "${pkgdir}/usr/lib/firmware/brcm/brcmfmac43456-sdio.pine64,quartz64-a.txt"
