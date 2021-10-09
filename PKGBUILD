@@ -2,7 +2,7 @@
 
 pkgname=ap6256-firmware
 pkgver=2020.02
-pkgrel=7
+pkgrel=8
 arch=('aarch64')
 pkgdesc='Firmware files for the ap6256 wifi/bt module'
 license=('unknown')
